@@ -1,0 +1,21 @@
+<form (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+        <label> firstname</label>
+        <input type="text" class="form-control" id ="firstname"
+            [(ngModel)] = "employee.firstname" name="firstname">
+    </div>
+    <div class="form-group">
+        <label> lastname</label>
+        <input type="text" class="form-control" id ="lastname"
+            [(ngModel)] = "employee.lastname" name="lastname">
+    </div>
+    <div class="form-group">
+        <label> lastname</label>
+        <input type="text" class="form-control" id ="emailID"
+            [(ngModel)] = "employee.emailID" name="emailID">
+    </div>
+
+    <button class="btn btn-success" type="submit">submit</button>
+
+</form>
+
