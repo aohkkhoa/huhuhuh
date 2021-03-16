@@ -18,16 +18,21 @@ user = new Loginmodel();
     
   }
   loginUser(){
+    
     this._service.loginuserfromremote(this.user).subscribe(
+     
       data => {
-        console.log("hihi"),
+    
+        sessionStorage.setItem('role',data) 
+        let role = sessionStorage.getItem('role')
+        console.log(role)
         this.router.navigate(['/employeesss'])
         sessionStorage.setItem('username',this.user.userName)
         let user = sessionStorage.getItem('username')
         console.log(user)
       },
       
-      error => console.log("erro")
+      error => console.log("error")
     )
    
   }

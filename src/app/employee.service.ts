@@ -21,7 +21,14 @@ export class EmployeeService {
     console.log(!(user === null))
     return !(user === null)
   }
+  isAdmin(){
+    let admin = sessionStorage.getItem('role')
+    console.log((admin === "admin"))
+    return (admin === "admin")
+  }
   logOut() {
     sessionStorage.removeItem('username')
+    sessionStorage.removeItem('role')
   }
+  
 }

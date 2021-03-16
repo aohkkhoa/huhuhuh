@@ -4,7 +4,9 @@
   <li role="presentation" class="active"><a routerLink="employeesss" routerLinkActive="active" class="text-decoration-none">home</a></li>
   <li role="presentation" class="active"><a routerLink="create-employee" routerLinkActive="active" class="text-decoration-none">create-employee</a></li>
   <li role="presentation" class="active"><a *ngIf="!employeeservice.isUserLoggedIn()" routerLink="login" class="nav-link">login</a></li>
-  <a *ngIf="employeeservice.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a>
+  <li role="presentation" class="active"><a *ngIf="employeeservice.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>
+  <li role="presentation" class="active"><a *ngIf="employeeservice.isAdmin()" routerLink="/" class="nav-link">role of admin</a></li>
+  
  </ul>
 
 

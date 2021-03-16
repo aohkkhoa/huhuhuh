@@ -10,6 +10,9 @@ export class RegistrationService {
 
   constructor( private _http : HttpClient) {}
   public loginuserfromremote(user :Loginmodel):Observable<any>{
-    return this._http.post<any>("http://localhost:8080/login",user)
+    return this._http.post("http://localhost:8080/login",user,{responseType : "text" as "json"});
+  }
+  public fetchuserbylogin():Observable<any>{
+    return this._http.get<any>("http://localhost:8080/login")
   }
 }
